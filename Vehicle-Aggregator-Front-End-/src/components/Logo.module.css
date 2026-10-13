@@ -1,0 +1,76 @@
+.logoContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+  text-decoration: none;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+  color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.25);
+  transition: transform var(--transition-fast);
+}
+
+.logoContainer:hover .iconWrapper {
+  transform: scale(1.04);
+}
+
+.textWrapper {
+  display: flex;
+  align-items: baseline;
+  letter-spacing: -0.5px;
+}
+
+.brandShop {
+  font-weight: 800;
+  color: var(--color-text-main);
+}
+
+.brandEase {
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+/* Sizes */
+.small .iconWrapper {
+  width: 32px;
+  height: 32px;
+}
+.small .brandIcon {
+  width: 18px;
+  height: 18px;
+}
+.small .textWrapper {
+  font-size: 1.25rem;
+}
+
+.medium .iconWrapper {
+  width: 40px;
+  height: 40px;
+}
+.medium .brandIcon {
+  width: 24px;
+  height: 24px;
+}
+.medium .textWrapper {
+  font-size: 1.625rem;
+}
+
+.large .iconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+}
+.large .brandIcon {
+  width: 28px;
+  height: 28px;
+}
+.large .textWrapper {
+  font-size: 2rem;
+}

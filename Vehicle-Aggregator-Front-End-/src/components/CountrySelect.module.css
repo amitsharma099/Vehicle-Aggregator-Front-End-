@@ -1,0 +1,107 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.triggerButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px 0 0;
+  height: 100%;
+  background: transparent;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.flag {
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+.code {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.chevron {
+  color: var(--color-text-muted);
+  transition: transform var(--transition-fast);
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: -40px;
+  width: 240px;
+  max-height: 220px;
+  overflow-y: auto;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-modal);
+  list-style: none;
+  padding: 4px;
+  z-index: 50;
+  animation: fadeIn 150ms ease-out;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.option:hover {
+  background-color: var(--color-primary-light);
+}
+
+.selectedOption {
+  background-color: var(--color-primary-subtle);
+  font-weight: 600;
+}
+
+.optionFlag {
+  font-size: 1.125rem;
+}
+
+.optionCountry {
+  flex: 1;
+  font-size: 0.875rem;
+  color: var(--color-text-main);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.optionCode {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

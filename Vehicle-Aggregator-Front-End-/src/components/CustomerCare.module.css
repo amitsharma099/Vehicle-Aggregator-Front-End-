@@ -1,0 +1,113 @@
+.container {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  font-family: var(--font-sans);
+}
+
+.careLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-light);
+  border: 1px solid var(--color-primary-border);
+  transition: all var(--transition-fast);
+  -webkit-tap-highlight-color: rgba(46, 125, 50, 0.2);
+  touch-action: manipulation;
+  /* Minimum tap target height for touch devices */
+  min-height: 40px;
+}
+
+.careLink:hover {
+  background-color: #D7ECD9;
+  color: var(--color-primary-hover);
+  border-color: var(--color-primary);
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.careLink:active {
+  transform: translateY(0);
+  background-color: var(--color-primary-border);
+  color: var(--color-primary-active);
+}
+
+.careLink:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.labelText {
+  font-weight: 500;
+  color: var(--color-text-main);
+}
+
+.numberText {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  color: var(--color-primary-hover);
+}
+
+/* Inline / subtle variant */
+.inline {
+  background-color: transparent;
+  border: none;
+  padding: 4px 6px;
+  min-height: unset;
+}
+
+.inline:hover {
+  background-color: var(--color-primary-light);
+  transform: none;
+  box-shadow: none;
+}
+
+/* Badge pill variant */
+.pill {
+  border-radius: var(--radius-full);
+  padding: 8px 16px;
+  font-size: 0.875rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .careLink {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 14px;
+    font-size: 0.9375rem;
+    min-height: 44px; /* Optimal 44px touch target on iOS & Android */
+  }
+
+  .numberText {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .careLink {
+    font-size: 0.875rem;
+    gap: 6px;
+    padding: 8px 10px;
+  }
+
+  .numberText {
+    font-size: 0.875rem;
+  }
+}
